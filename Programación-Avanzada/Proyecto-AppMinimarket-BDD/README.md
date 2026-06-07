@@ -1,1 +1,1 @@
-
+Sistema de gestión para minimarket desarrollado en Java y MySQL, implementando programación orientada a objetos, acceso a datos (DAO), operaciones CRUD y administración de inventario, clientes y ventas.
