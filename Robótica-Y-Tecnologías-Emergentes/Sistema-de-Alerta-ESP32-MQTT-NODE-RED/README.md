@@ -1,0 +1,1 @@
+Implementación de un sistema IoT para detección de alertas por voz utilizando ESP32, comunicación MQTT y dashboards en Node-RED. Incluye procesamiento de eventos, transmisión de datos en tiempo real y monitoreo mediante interfaces gráficas.
