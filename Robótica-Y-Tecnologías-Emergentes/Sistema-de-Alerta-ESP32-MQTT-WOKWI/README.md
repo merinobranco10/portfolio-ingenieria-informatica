@@ -1,0 +1,1 @@
+Sistema de alerta inteligente desarrollado y simulado en Wokwi utilizando ESP32, múltiples sensores y comunicación MQTT en tiempo real. El proyecto permite monitorear eventos, generar alertas automáticas y transmitir datos mediante una arquitectura IoT.
