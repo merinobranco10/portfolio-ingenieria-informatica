@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "ESP32", "top": 19.2, "left": 62.44, "attrs": {} },
+    { "type": "wokwi-led", "id": "LED ALARMA", "top": 54, "left": 243.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "RESISTENCIA",
+      "top": 137.8,
+      "left": 239.15,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "BOTON",
+      "top": -67.6,
+      "left": 141.2,
+      "rotate": 270,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    { "type": "wokwi-potentiometer", "id": "POTENCIOMETRO", "top": -58.9, "left": -29, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "SENSOR PIR", "top": 61.6, "left": -103.38, "attrs": {} }
+  ],
+  "connections": [
+    [ "ESP32:TX", "$serialMonitor:RX", "", [] ],
+    [ "ESP32:RX", "$serialMonitor:TX", "", [] ],
+
+    [ "POTENCIOMETRO:GND", "ESP32:GND.1", "black", [ "v0" ] ],
+    [ "POTENCIOMETRO:VCC", "ESP32:3V3", "red", [ "v0" ] ],
+    [ "POTENCIOMETRO:SIG", "ESP32:34", "green", [ "v0" ] ],
+
+    [ "ESP32:2", "RESISTENCIA:1", "red", [ "h0" ] ],
+    [ "LED ALARMA:A", "RESISTENCIA:2", "red", [ "v0" ] ],
+    [ "ESP32:GND.3", "LED ALARMA:C", "black", [ "h0" ] ],
+    
+    [ "ESP32:GND.2", "BOTON:1.l", "black", [ "v0" ] ],
+    [ "ESP32:15", "BOTON:2.l", "red", [ "h19.2", "v-192.2" ] ],
+
+    [ "SENSOR PIR:VCC", "ESP32:3V3", "red", [ "h-48", "v-105.6" ] ],
+    [ "SENSOR PIR:GND", "ESP32:GND.1", "black", [ "v0" ] ],
+    [ "SENSOR PIR:OUT", "ESP32:13", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
