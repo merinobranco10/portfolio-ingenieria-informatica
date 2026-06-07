@@ -1,0 +1,19 @@
+Librerías utilizadas en Arduino IDE:
+
+- WiFi.h (ESP32 core)
+- PubSubClient (MQTT)
+- ArduinoJson (JSON serialization)
+
+Librerias utilizadas en Python
+
+- speechrecognition
+- pyserial
+- pyaudio
+- time (estándar, no se instala)
+
+Nota: Para instalación de librerías en Python.
+Abre terminal o CMD y ejecuta:
+
+pip install speechrecognition
+pip install pyserial
+pip install pyaudio
