@@ -1,0 +1,93 @@
+@ApplicationPath("/api")
+
+RUTA DEFAULT: 
+http://localhost:8080/ApiMinimarket/api
+
+Recursos:
+		ProductoResource: /api/productos
+		UsuarioResource: /api/usuarios/login
+		VentaResource: /api/ventas
+
+
+Endpoints de Productos(ProductoResource)
+
+	1. Listar todos los productos
+	Método: GET
+	Ruta: /api/productos
+
+	2. Obtener producto por id
+	Método: GET
+	Ruta: /api/productos/{id}
+
+	3. Crear nuevo producto
+	Método: POST
+	Ruta: /api/productos
+
+	JSON
+	{
+	   "nombre": String,
+	   "idCategoria": Int,
+	   "tipoVenta": String,
+	   "precioBase": Double,
+	   "stock": Int,
+	   "extra": String
+	}
+
+
+	4. Actualizar producto
+	Método: PUT
+	Ruta: /api/productos/{id}
+
+	JSON
+	{
+	   "nombre": String,
+	   "idCategoria": Int,
+	   "tipoVenta": String,
+	   "precioBase": Double,
+	   "stock": Int,
+	   "extra": String
+	}
+
+
+	5. Eliminar producto
+	Método: DELETE
+	Ruta: /api/productos/{id}
+
+Endpoints de Usuarios (UsuarioResource)
+	
+	1. Login de Usuario
+	Método: POST
+	Ruta: /api/usuarios/login
+
+	JSON
+	{
+	   "username": String,
+	   "password": String
+	}
+
+
+Endpoints de Ventas (VentaResource)
+	
+	1. Registrar Venta
+	Método: POST	
+	Ruta: /api/ventas
+
+	JSON
+	{
+	   "subtotal": Double,
+	   "iva": Double,
+	   "total": Double,
+	   "idUsuario": Int,
+	   "detalles": [
+		{
+	   	 "idProducto": Int,
+	  	  "cantidad": Int,
+	  	  "precioUnitario": Double}
+		]
+	}
+
+
+	2. Listar Ventas
+	Método: GET
+	Ruta: /api/ventas
+
