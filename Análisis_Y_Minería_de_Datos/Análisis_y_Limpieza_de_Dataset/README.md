@@ -1,0 +1,1 @@
+Proyecto de análisis y limpieza del dataset Spotify 2023 modificado, desarrollado en Google Colab para la asignatura Análisis y Minería de Datos para Ingeniería. Incluye tratamiento de valores nulos, detección y manejo de outliers mediante IQR, codificación de variables categóricas con One Hot Encoding y preparación de datos para análisis posteriores.
