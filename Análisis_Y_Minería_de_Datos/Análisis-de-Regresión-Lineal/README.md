@@ -1,0 +1,1 @@
+Análisis de regresión lineal simple aplicado a datos de partidas de League of Legends, con el objetivo de estudiar la relación entre el número de kills y la cantidad de oro obtenido. Proyecto desarrollado en el contexto de Ingeniería en Informática, utilizando técnicas estadísticas para evaluar correlación y comportamiento de variables en el juego.
